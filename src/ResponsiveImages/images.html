@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Images</title>
+  </head>
+  <style>
+    *,
+    *::after,
+    *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+      /* apparently the best way to extend the border-box box-sizing */
+    }
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      font-family: sans-serif;
+      box-sizing: border-box;
+      /* apparently the best way to extend the border-box box-sizing */
+      padding: 2rem;
+    }
+    .heading-2 {
+      padding: 2rem;
+    }
+    .container {
+      display: grid;
+      grid-template-rows: repeat(2, min-content);
+    }
+    .img {
+      max-width: 100%;
+    }
+  </style>
+  <body>
+    <h1 class="heading-1">Responsive Images</h1>
+
+    <h2 class="heading-2">Art Direction</h2>
+    <div class="container">
+      <picture>
+        <!-- The tilted img will be displayed if the scree size < 37.5em -->
+        <!-- Else, the larger img will be displayed. -->
+        <source srcset="./pic-med-tilted.jpg" media="(max-width:37.5em)" />
+        <img src="./pic-med.jpg" alt="Mountain Range" class="img" />
+        <!-- The src is the fallback image, in case srcset doesn't work -->
+      </picture>
+    </div>
+
+    <h2 class="heading-2">Resolution Switching</h2>
+    <div class="container">
+      <img
+        srcset="./pic-med.jpg 1920w, ./pic-small.jpg 640w"
+        sizes="(max-width: 600px) 61vw, (max-width: 1200px) 67vw, 1920px"
+        alt="Mountain Range"
+        class="img"
+        src="./pic-med.jpg"
+      />
+    </div>
+    <!-- The src is the fallback image, in case srcset doesn't work -->
+  </body>
+</html>
