@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solid Gradient</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+      }
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      :root {
+        --color-primary: #16c47f;
+      }
+
+      .container {
+        width: 80%;
+        margin: 3rem auto;
+        border-radius: 5px;
+        background-image: linear-gradient(
+            100deg,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.8) 52%,
+            transparent 52%
+          ),
+          url(./seacoast.jpg);
+        background-size: cover;
+
+        display: flex;
+      }
+      .text-box {
+        font-size: 2rem;
+        line-height: 1.6;
+        padding: 2rem;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+        tenetur ex itaque iusto maiores. Dolores blanditiis a nesciunt itaque
+        non illo id excepturi nulla repellendus. At, obcaecati quidem ab nobis
+        suscipit eveniet alias unde hic ullam repellendus illum dolor quisquam
+        quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+    </div>
+  </body>
+</html>
