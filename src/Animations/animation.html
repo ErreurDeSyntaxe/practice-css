@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+      }
+      html {
+        box-sizing: border-box;
+        font-size: 62.5;
+        font-family: sans-serif;
+      }
+      body {
+        padding: 2rem;
+      }
+
+      .container {
+        padding: 5rem;
+      }
+      .spinner {
+        width: 25rem;
+        height: 25rem;
+        margin: 0 auto;
+        border-radius: 7px;
+        background-color: #aaa;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation-play-state: paused;
+        animation: spin 2s linear infinite paused;
+        transition: transform 1s ease-out;
+      }
+      .spinner:hover {
+        animation-play-state: running;
+        transform: rotate(-0.2turn);
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading-1">Animations @keyframes</h1>
+    <div class="container">
+      <div class="spinner">You spin me right round, baby, right round...</div>
+    </div>
+  </body>
+</html>
