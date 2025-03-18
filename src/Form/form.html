@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Styling & Radio Buttons</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+      }
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      body {
+        font-family: 'Courier New', Courier, monospace;
+        padding: 2rem;
+      }
+
+      .container {
+        width: fit-content;
+        padding: 2rem;
+        margin: 2rem auto;
+        border-radius: 5px;
+        background-color: #aaa;
+      }
+      .form {
+        background-color: #888;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .form__input {
+        /* form elements inherit differently */
+        font-size: 1.5rem;
+        font-family: inherit;
+        font-weight: 900;
+        color: #ff9d23;
+        /* form elements inherit differently */
+        width: 40rem;
+        padding: 1.5rem 2rem;
+        border-radius: 3px;
+        border: none;
+        border-bottom: 3px solid transparent;
+
+        transition: all 300ms;
+        display: block;
+      }
+      .form__input::placeholder {
+        color: black;
+        font-weight: 700;
+      }
+      .form__input:focus {
+        outline: none;
+        border-bottom: 3px solid #16c47f;
+      }
+      .form__input:focus:invalid {
+        border-bottom: 3px solid #f93827;
+      }
+      /* ONE WAY OF STYLING THE LABEL */
+      .form__label-1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left: 2rem;
+
+        transition: all 300ms;
+        transform: translateY(-3.5rem);
+        display: block;
+      }
+      .form__input:focus + .form__label-1 {
+        transform: translateY(0.7rem);
+      }
+      .form__input:not(:placeholder-shown) + .form__label-1 {
+        transform: translateY(0.7rem);
+      }
+      /* ONE WAY OF STYLING THE LABEL */
+
+      /* ANOTHER WAY OF STYLING THE LABEL */
+      .form__label-2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left: 2rem;
+
+        transition: all 300ms;
+        display: block;
+        transform: translateY(0);
+      }
+      .form__input:placeholder-shown + .form__label-2 {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+      }
+      /* ANOTHER WAY OF STYLING THE LABEL */
+
+      /* STYLING THE RADIO BUTTONS */
+      .form__radio-input {
+        display: none;
+      }
+      .form__radio-group {
+        width: 48%;
+        display: inline-block;
+      }
+      .form__radio-label {
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+        font-size: 1.5rem;
+      }
+      .form__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid #16c47f;
+        border-radius: 50%;
+
+        position: absolute;
+        left: 0;
+        top: -0.6rem;
+
+        display: inline-block;
+      }
+      .form__radio-button::after {
+        content: '';
+        display: block;
+
+        height: 1.3rem;
+        width: 1.3rem;
+        border-radius: 50%;
+        background-color: #16c47f;
+        opacity: 0;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: opacity 200ms;
+      }
+      .form__radio-input:checked
+        + .form__radio-label
+        .form__radio-button::after {
+        opacity: 1;
+      }
+      /* STYLING THE RADIO BUTTONS */
+    </style>
+  </head>
+  <body>
+    <h1 class="heading-1">Form Styling</h1>
+    <div class="container">
+      <form action="#" class="form">
+        <div class="form__group">
+          <input
+            type="text"
+            class="form__input"
+            id="full-name"
+            placeholder=" "
+            required
+          />
+          <label for="full-name" class="form__label form__label-1"
+            >Full Name</label
+          >
+        </div>
+
+        <div class="form__group">
+          <input
+            type="email"
+            class="form__input"
+            id="email-address"
+            placeholder="Email Address"
+            required
+          />
+          <label for="email-address" class="form__label form__label-2"
+            >Email Address</label
+          >
+        </div>
+
+        <div class="form__group">
+          <div class="form__radio-group">
+            <input
+              type="radio"
+              class="form__radio-input"
+              id="value-1"
+              name="identicalName"
+            />
+            <label for="value-1" class="form__radio-label">
+              <span class="form__radio-button"></span>
+              Value 1</label
+            >
+          </div>
+
+          <div class="form__radio-group">
+            <input
+              type="radio"
+              class="form__radio-input"
+              id="value-2"
+              name="identicalName"
+            />
+            <label for="value-2" class="form__radio-label">
+              <span class="form__radio-button"></span>
+              Value 2</label
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
