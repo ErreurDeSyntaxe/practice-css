@@ -1,18 +1,12 @@
-# Practice Ring
+# CSS Practice Ring
 
-A place to hone my skills
+A place to hone my CSS skills
 
 ## About the Project
 
-<!-- ### Preview
-
-<div align='center'>
-    <img src='./README/project-preview.jpg'>
-</div> -->
-
 ### Live
 
-<a href='https://erreurdesyntaxe.github.io/css-practice/'>CSS Practice</a>
+<a href='https://erreurdesyntaxe.github.io/practice-css/'>CSS Practice</a>
 
 ### Objective
 
@@ -21,10 +15,15 @@ The goal of this 'project' is to become more proficient with the concepts and te
 ### Notable Features
 
 - Animations
+- Clip Path
 - CSS Grid
 - Icon Sprite & Favicon
+- Forms
+- Navigation
+- Radio Buttons
 - Responsive Images
 - SASS
+- Solid Gradient
 
 ### Built With
 
