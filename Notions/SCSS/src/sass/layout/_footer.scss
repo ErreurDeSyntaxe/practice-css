@@ -1,8 +1,0 @@
-@use '../abstracts/variables' as *;
-
-.footer {
-  &__link:link,
-  &__link:visited {
-    color: $color-gray-dark;
-  }
-}
