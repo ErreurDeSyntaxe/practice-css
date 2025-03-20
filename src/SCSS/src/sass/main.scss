@@ -1,0 +1,13 @@
+.heading {
+  &-1 {
+    font-size: 2rem;
+    color: #444;
+  }
+}
+
+.img {
+  display: block;
+  max-width: max(40%, 20rem);
+
+  margin: 3rem auto;
+}
