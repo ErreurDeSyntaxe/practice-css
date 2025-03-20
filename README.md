@@ -22,7 +22,7 @@ The goal of this 'project' is to become more proficient with the concepts and te
 - Navigation
 - Radio Buttons
 - Responsive Images
-- SASS
+- SCSS
 - Solid Gradient
 
 ### Built With
