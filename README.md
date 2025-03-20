@@ -20,9 +20,9 @@ The goal of this 'project' is to become more proficient with the concepts and te
 - Icon Sprite & Favicon
 - Forms
 - Navigation
+- Parcel (Sass)
 - Radio Buttons
 - Responsive Images
-- SCSS
 - Solid Gradient
 
 ### Built With
