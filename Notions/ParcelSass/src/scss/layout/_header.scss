@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as *;
+
+.heading-1 {
+  font-size: $large-size;
+  color: $color-gray-dark;
+}
