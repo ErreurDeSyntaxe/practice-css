@@ -1,9 +1,6 @@
-.heading {
-  &-1 {
-    font-size: 2rem;
-    color: #444;
-  }
-}
+@use './base/base';
+@use './layout/header';
+@use './layout/footer';
 
 .img {
   display: block;
